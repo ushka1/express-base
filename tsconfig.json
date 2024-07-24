@@ -17,9 +17,12 @@
   },
 
   "compilerOptions": {
-    "pretty": true, // Use pretty error messages.
     "experimentalDecorators": true, // Required by Typegoose.
     "emitDecoratorMetadata": true, // Required by Typegoose.
+
+    "pretty": true, // Use pretty error messages.
+    "noImplicitOverride": true, // Enforce marking method overrides with the 'override' keyword.
+
     "paths": {
       "@/*": ["./src/*"]
     }
