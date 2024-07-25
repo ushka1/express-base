@@ -6,6 +6,9 @@ export default [
   {
     languageOptions: { globals: globals.node },
   },
+  {
+    ignores: ['setupTests.js'],
+  },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
 ];
