@@ -1,7 +1,6 @@
 import { Express } from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUI from 'swagger-ui-express';
-import { logger } from './logger';
 
 const openapiSpecification = swaggerJsdoc({
   definition: {
@@ -32,9 +31,5 @@ export function setupSwagger(app: Express) {
     swaggerUI.setup(openapiSpecification, {
       customSiteTitle: 'Express Base API',
     }),
-  );
-
-  logger.info(
-    `API docs available at http://localhost:${process.env.PORT}/api-docs.`,
   );
 }
