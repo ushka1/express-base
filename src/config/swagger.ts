@@ -6,9 +6,10 @@ const openapiSpecification = swaggerJsdoc({
   definition: {
     openapi: '3.0.0',
     info: {
-      title: 'Express Base API',
+      title: 'Express Ts-Node Base API',
       version: '1.0.0',
-      description: 'API for Express Base, a simple Express.js starter project.',
+      description:
+        'API for Express Ts-Node Base, a simple Express.js starter project.',
     },
     servers: [
       {
@@ -29,7 +30,7 @@ export function setupSwagger(app: Express) {
     '/api-docs',
     swaggerUI.serve,
     swaggerUI.setup(openapiSpecification, {
-      customSiteTitle: 'Express Base API',
+      customSiteTitle: 'Express Ts-Node Base API',
     }),
   );
 }
