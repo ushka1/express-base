@@ -12,6 +12,8 @@ COPY . .
 
 # Run tests
 RUN npm run test
+# Remove development dependencies
+RUN npm prune --omit=dev
 
 # Base image for release
 FROM node:20-alpine AS release
@@ -20,8 +22,6 @@ FROM node:20-alpine AS release
 WORKDIR /app
 # Copy build artifacts
 COPY --from=build /app .
-# Remove development dependencies
-RUN npm prune --omit=dev
 
 # Define build argument for port
 ARG PORT=8080
