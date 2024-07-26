@@ -7,10 +7,8 @@ const port = process.env.PORT;
 (async () => {
   const server = app.listen(port);
   logger.info(`Server running on http://localhost:${port}.`);
-  logger.info(
-    `API docs available at http://localhost:${process.env.PORT}/api-docs.`
-  );
+  logger.info(`API docs available at http://localhost:${port}/api-docs.`);
 
   setupGracefulShutdown(server);
-  logger.info('Graceful shutdown setup.');
+  logger.info('Graceful shutdown setup complete.');
 })();
