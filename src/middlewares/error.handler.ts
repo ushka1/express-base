@@ -5,7 +5,7 @@ export function errorHandler(
   err: unknown,
   req: Request,
   res: Response,
-  next: NextFunction,
+  next: NextFunction
 ) {
   logger.error('Internal server error.', err);
 
