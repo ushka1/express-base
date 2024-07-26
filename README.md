@@ -12,8 +12,8 @@ This is a base project for a backend application. It includes a basic structure 
 
 ## Docker
 
-1. `docker build -t ushka1/express-ts-node-base .`
-1. `docker run -p 8888:8888 ushka1/express-ts-node-base`
+1. `docker build --build-arg "PORT=8080" -t ushka1/express-ts-node-base .`
+1. `docker run -p 8080:8080 ushka1/express-ts-node-base`
 
 ## Features
 
