@@ -11,11 +11,14 @@ const openapiSpecification = swaggerJsdoc({
       description:
         'API for Express Ts-Node Base, a simple Express.js + Typescript starter project.',
     },
-    servers: [
-      {
-        url: `http://localhost:${process.env.PORT}`,
-      },
-    ],
+    // servers: [
+    //   {
+    //     url: '/',
+    //   },
+    //   {
+    //     url: 'http://example.com',
+    //   },
+    // ],
   },
   apis: ['./src/**/*.ts', './src/**/*.yaml'],
   failOnErrors: true,
